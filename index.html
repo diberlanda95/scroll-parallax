@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <title>Natureza - BND</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Trabalho</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/estrelas.png" id="estrelas">
+        <img src="img/moon.png" id="lua">
+        <h2 id="text">Lua Cheia</h2>
+        <a href="#sec" id="btn">Explorar</a>
+
+    </section>
+    <div class="sec" id="sec">
+        <h2>Efeito de rolagem Parallax</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis mi magna, a tincidunt ligula dapibus sit amet. Ut a ex nec lorem ornare ultrices. Proin non massa at nunc porttitor posuere. Suspendisse potenti. Vivamus consequat neque sodales imperdiet malesuada. Mauris a nibh ut enim euismod mollis. Nunc ut arcu diam. Sed et mollis lectus. Ut viverra eros ipsum, et auctor dui ultrices at.<br>
+            Duis vel scelerisque quam. Fusce posuere erat sapien, nec placerat risus tristique ut. Quisque ornare rutrum varius. Nulla consectetur massa eros, ut vestibulum nibh egestas vel. In auctor viverra ipsum nec sodales. Mauris ut volutpat dolor. Donec vel sem vitae nibh vestibulum sagittis quis ut ligula. Quisque eleifend consectetur porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Vivamus et sodales tellus. Maecenas metus orci, tristique eu vestibulum quis, cursus eu libero. Nullam mi odio, eleifend in bibendum sed, congue in ipsum. Cras aliquet libero sed justo tincidunt accumsan. Quisque elementum quam et dolor consectetur porttitor. Morbi nibh eros, tempus in turpis vel, vestibulum tincidunt lorem. Aenean vitae leo neque. In ac diam dictum, rhoncus ex eu, vestibulum neque. Quisque vitae ultrices sapien, nec cursus lectus. Curabitur at nisl varius lacus eleifend cursus. Suspendisse condimentum ligula sed suscipit rutrum. Mauris tempor egestas orci, et varius odio sagittis id. Proin sit amet felis ut ante ultricies aliquet.<br>
+            Cras tempor risus justo, quis dignissim leo consectetur sit amet. Sed condimentum, purus ac efficitur vulputate, sem arcu maximus urna, eu ullamcorper ante enim sed est. Nullam ut ante vel quam bibendum ullamcorper in quis sem. Duis ac hendrerit dui. Ut vulputate congue nulla eget vestibulum. Sed dignissim egestas blandit. Fusce in odio vel risus vulputate dictum. Fusce vel nisl ut erat scelerisque ornare sed auctor sem. Sed et interdum augue. Morbi aliquam blandit aliquet. Nam vel ligula arcu. Praesent molestie, eros quis convallis ornare, libero nisi consequat nibh, a accumsan orci risus et purus. Nam at suscipit nisi, ac laoreet diam. Vivamus faucibus congue diam sed mollis. Nunc nec sodales odio, et ullamcorper augue.
+        </p>
+    </div>
+    <script>
+        let estrelas = document.getElementById('estrelas');
+        let lua = document.getElementById('lua');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            estrelas.style.left = value * 0.25 + 'px';
+            lua.style.top = value * 1.05 +'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+    <footer>
+        <h2>Desenvolvido por Diogo Berlanda</h2>
+    </footer>
+    
+</body>
+</html>
